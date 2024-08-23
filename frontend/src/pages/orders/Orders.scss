@@ -1,0 +1,242 @@
+// .orders {
+//   display: flex;
+//   justify-content: center;
+//   color: #555;
+
+//   .container {
+//     width: 1400px;
+//     height: 100vh;
+//     padding: 50px 0px;
+
+//     .title {
+//       display: flex;
+//       justify-content: space-between;
+
+//       button {
+//         background-color: #1dbf73;
+//         color: white;
+//         font-weight: 500;
+//         border: none;
+//         padding: 10px;
+//         cursor: pointer;
+//       }
+//     }
+
+//     table {
+//       width: 100%;
+
+//       tr {
+//         height: 50px;
+//         th {
+//           text-align: left;
+//         }
+//         td {
+//           sup {
+//             font-size: 12px;
+//           }
+
+//           .image {
+//             width: 50px;
+//             height: 25px;
+//             object-fit: cover;
+//           }
+
+//           .message {
+//             width: 25px;
+//             cursor: pointer;
+//           }
+//         }
+//         &:nth-child(even) {
+//           background-color: #1dbf730f;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// second
+// .orders {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 100vh;
+//   background-color: #f0f2f5;
+
+//   .container {
+//     background-color: #fff;
+//     padding: 40px;
+//     border-radius: 8px;
+//     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+//     width: 90%;
+//     max-width: 1200px;
+
+//     .title {
+//       text-align: center;
+//       margin-bottom: 20px;
+
+//       h1 {
+//         color: #333;
+//         font-size: 24px;
+//       }
+//     }
+
+//     table {
+//       width: 100%;
+//       border-collapse: collapse;
+//       margin-top: 20px;
+
+//       th,
+//       td {
+//         padding: 12px;
+//         text-align: left;
+//         border-bottom: 1px solid #ddd;
+//       }
+
+//       th {
+//         background-color: #f2f2f2;
+//         font-size: 16px;
+//         color: #555;
+//       }
+
+//       td {
+//         font-size: 16px;
+//         color: #333;
+//       }
+
+//       .image {
+//         width: 80px;
+//         height: 80px;
+//         object-fit: cover;
+//         border-radius: 4px;
+//       }
+
+//       .message {
+//         width: 24px;
+//         height: 24px;
+//         cursor: pointer;
+//         transition: transform 0.3s ease;
+
+//         &:hover {
+//           transform: scale(1.1);
+//         }
+//       }
+//     }
+//   }
+// }
+
+//third
+.orders {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  z-index: 0;
+  background-color: #f0f2f5;
+  // overflow: hidden;
+
+  .container {
+    font-family: "Roboto", sans-serif; /* Example of Google Font 'Roboto' */
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100vw;
+    min-height: 100vh;
+    overflow: scroll;
+
+    .title {
+      text-align: center;
+      margin-bottom: 20px;
+      // width: 40%;
+      h1 {
+        font-family: "Montserrat", sans-serif; /* Example of Google Font 'Montserrat' */
+        color: #333;
+        font-size: 24px;
+        font-weight: 600;
+        margin: 0;
+      }
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+
+      th,
+      td {
+        padding: 12px;
+        // text-align: center;
+        border-bottom: 1px solid #ddd;
+        &:first-child {
+          width: 10%;
+          text-align: center;
+          // text-align: center;
+        }
+        &:nth-child(2) {
+          text-align: center;
+          width: 40%;
+        }
+        &:nth-child(3) {
+          text-align: center;
+          width: 20%;
+        }
+        &:last-child {
+          // text-align: right;
+          text-align: left;
+        }
+      }
+
+      th {
+        background-color: #f2f2f2;
+        font-family: "Montserrat", sans-serif;
+        font-size: 16px;
+        color: #555;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      td {
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        color: #333;
+        vertical-align: middle;
+
+        &:first-child {
+          width: 10%;
+          text-align: center;
+          // text-align: center;
+
+          img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 50%;
+          }
+        }
+        &:nth-child(2) {
+          text-align: center;
+          width: 40%;
+        }
+        &:nth-child(3) {
+          text-align: center;
+          width: 20%;
+        }
+        &:last-child {
+          // text-align: right;
+          text-align: center;
+          .message {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
+  }
+}

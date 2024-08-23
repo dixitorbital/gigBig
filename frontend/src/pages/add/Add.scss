@@ -1,0 +1,236 @@
+// .add {
+//   display: flex;
+//   justify-content: center;
+
+//   .container {
+//     width: 1000px;
+//     padding: 50px 0px;
+//     // height: 900px;
+//     h1 {
+//       width: max-content;
+//       margin-bottom: 30px;
+//       color: gray;
+//       font-weight: 300;
+//     }
+
+//     .sections {
+//       display: flex;
+//       justify-content: space-between;
+//       gap: 100px;
+
+//       label {
+//         color: gray;
+//         font-size: 18px;
+//       }
+
+//       .info,
+//       .details {
+//         flex: 1;
+//         display: flex;
+//         flex-direction: column;
+//         gap: 10px;
+//         justify-content: space-between;
+
+//         input,
+//         select,
+//         textarea {
+//           padding: 20px;
+//           border: 1px solid rgba(91, 94, 93, 0.323);
+//         }
+
+//         .images {
+//           display: flex;
+//           align-items: center;
+//           gap: 20px;
+
+//           .imagesInputs {
+//             display: flex;
+//             flex-direction: column;
+//             gap: 20px;
+//           }
+//         }
+
+//         button {
+//           border: none;
+//           padding: 20px;
+//           color: white;
+//           font-weight: 500;
+//           font-size: 18px;
+//           background-color: #1dbf73;
+//           cursor: pointer;
+//         }
+
+//         .add {
+//           display: flex;
+//           justify-content: space-between;
+
+//           input {
+//             width: 80%;
+//           }
+//         }
+
+//         .addedFeatures {
+//           display: flex;
+//           gap: 20px;
+
+//           button {
+//             height: 30px;
+//             font-size: 12px;
+//             font-weight: 400;
+//             background: transparent;
+//             color: red;
+//             border: 1px solid red;
+//             display: flex;
+//             align-items: center;
+//             gap: 20px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// Add.scss
+
+$primary-color: #2196f3;
+$background-color: #f0f4f8;
+$text-color: #333;
+$border-color: #ddd;
+$button-hover-color: darken($primary-color, 10%);
+
+.add {
+  background-color: $background-color;
+  padding: 20px;
+  font-weight: 400;
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    h1 {
+      color: $primary-color;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .title {
+      text-align: center;
+      margin-bottom: 20px;
+      // width: 40%;
+      h1 {
+        font-family: "Montserrat", sans-serif; /* Example of Google Font 'Montserrat' */
+        color: #333;
+        font-size: 40px;
+        font-weight: 900;
+        margin: 0;
+      }
+    }
+    .sections {
+      display: flex;
+      justify-content: space-between;
+      .info,
+      .details {
+        flex: 1;
+        margin: 0 10px;
+        label {
+          display: block;
+          margin: 10px 0 5px;
+          color: $text-color;
+        }
+        input,
+        select,
+        textarea {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid $border-color;
+          border-radius: 5px;
+          margin-bottom: 15px;
+          &:focus {
+            border-color: $primary-color;
+            outline: none;
+          }
+        }
+        .images {
+          .imagesInputs {
+            display: flex;
+            justify-content: space-between;
+            input[type="file"] {
+              width: calc(50% - 5px);
+            }
+          }
+          button {
+            display: block;
+            width: 20%;
+            padding: 10px;
+            background-color: $primary-color;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            justify-self: flex-end;
+            cursor: pointer;
+            &:hover {
+              background-color: $button-hover-color;
+            }
+          }
+        }
+        button {
+          display: block;
+          width: 100%;
+          padding: 10px;
+          background-color: $primary-color;
+          justify-self: flex-end;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          &:hover {
+            background-color: $button-hover-color;
+          }
+        }
+      }
+      .addedFeatures {
+        margin: 15px 0;
+        .item {
+          display: inline-block;
+          background-color: mediumaquamarine;
+          color: #fff;
+          padding: 5px 10px;
+          border-radius: 5px;
+          margin-right: 5px;
+          button {
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            &:hover {
+              color: $button-hover-color;
+            }
+            span {
+              margin-left: 5px;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+      .add {
+        display: flex;
+        input {
+          flex: 1;
+          margin-right: 10px;
+        }
+        button {
+          flex: none;
+          background-color: $primary-color;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          padding: 10px 15px;
+          cursor: pointer;
+          &:hover {
+            background-color: $button-hover-color;
+          }
+        }
+      }
+    }
+  }
+}

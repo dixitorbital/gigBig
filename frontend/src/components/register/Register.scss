@@ -1,0 +1,239 @@
+// .register {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   form {
+//     width: 960px;
+//     padding: 100px 0px;
+//     display: flex;
+//     gap: 120px;
+
+//     h1 {
+//       color: gray;
+//       margin-bottom: 20px;
+//     }
+
+//     .left,
+//     .right {
+//       flex: 1;
+//       display: flex;
+//       flex-direction: column;
+//       gap: 10px;
+//       justify-content: space-between;
+
+//       label {
+//         color: gray;
+//         font-size: 18px;
+//       }
+
+//       input,
+//       textarea {
+//         padding: 20px;
+//         border: 1px solid rgb(216, 214, 214);
+//       }
+
+//       button {
+//         border: none;
+//         padding: 20px;
+//         color: white;
+//         font-weight: 500;
+//         font-size: 18px;
+//         background-color: #1dbf73;
+//         cursor: pointer;
+//       }
+
+//       .toggle {
+//         display: flex;
+//         align-items: center;
+//         gap: 10px;
+
+//         .switch {
+//           position: relative;
+//           display: inline-block;
+//           width: 50px;
+//           height: 24px;
+//         }
+
+//         /* Hide default HTML checkbox */
+//         .switch input {
+//           opacity: 0;
+//           width: 0;
+//           height: 0;
+//         }
+
+//         .slider {
+//           position: absolute;
+//           cursor: pointer;
+//           top: 0;
+//           left: 0;
+//           right: 0;
+//           bottom: 0;
+//           background-color: #ccc;
+//           -webkit-transition: 0.4s;
+//           transition: 0.4s;
+//           border-radius: 24px;
+//         }
+
+//         .slider:before {
+//           position: absolute;
+//           content: "";
+//           height: 16px;
+//           width: 16px;
+//           left: 4px;
+//           bottom: 4px;
+//           background-color: white;
+//           -webkit-transition: 0.4s;
+//           transition: 0.4s;
+//           border-radius: 50%;
+//         }
+
+//         input:checked + .slider {
+//           background-color: #2196f3;
+//         }
+
+//         input:focus + .slider {
+//           box-shadow: 0 0 1px #2196f3;
+//         }
+
+//         input:checked + .slider:before {
+//           -webkit-transform: translateX(26px);
+//           -ms-transform: translateX(26px);
+//           transform: translateX(26px);
+//         }
+//       }
+//     }
+//   }
+// }
+
+.register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7f9fc; /* Light background color */
+  min-height: 100vh;
+  padding: 20px;
+
+  form {
+    width: 960px;
+    padding: 60px 40px;
+    background-color: #ffffff; /* White background for the form */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap; /* Wrap items on small screens */
+
+    h1 {
+      color: #333333; /* Dark gray color */
+      margin-bottom: 20px;
+      font-size: 28px; /* Larger font size */
+      font-weight: 700; /* Bold font weight */
+    }
+
+    .left,
+    .right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px; /* Increased gap between elements */
+      justify-content: flex-start;
+
+      label {
+        color: #555555; /* Medium gray color */
+        font-size: 16px; /* Font size */
+        font-weight: 600; /* Semi-bold font weight */
+      }
+
+      input,
+      textarea {
+        padding: 16px; /* Padding inside inputs and textarea */
+        border: 1px solid #d0d0d0; /* Light gray border */
+        border-radius: 8px; /* Rounded corners */
+        font-size: 16px; /* Font size */
+        color: #333333; /* Text color */
+        background-color: #f9f9f9; /* Slightly off-white background */
+        transition: border-color 0.3s; /* Smooth border transition */
+      }
+
+      input:focus,
+      textarea:focus {
+        border-color: #1dbf73; /* Green border on focus */
+        outline: none; /* Remove default outline */
+      }
+
+      button {
+        border: none;
+        padding: 16px; /* Padding inside button */
+        color: white; /* White text color */
+        font-weight: 600; /* Semi-bold font weight */
+        font-size: 18px; /* Font size */
+        background-color: #2196f3; /* Green background */
+        cursor: pointer;
+        border-radius: 8px; /* Rounded corners */
+        transition: background-color 0.3s; /* Smooth background transition */
+      }
+
+      button:hover {
+        background-color: #2196f3; /* Darker green on hover */
+      }
+
+      .toggle {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .switch {
+          position: relative;
+          display: inline-block;
+          width: 50px;
+          height: 24px;
+        }
+
+        .switch input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #ccc;
+          transition: 0.4s;
+          border-radius: 24px;
+        }
+
+        .slider:before {
+          position: absolute;
+          content: "";
+          height: 16px;
+          width: 16px;
+          left: 4px;
+          bottom: 4px;
+          background-color: white;
+          transition: 0.4s;
+          border-radius: 50%;
+        }
+
+        input:checked + .slider {
+          background-color: #2196f3; /* Blue background for checked */
+        }
+
+        input:focus + .slider {
+          box-shadow: 0 0 1px #2196f3; /* Blue shadow on focus */
+        }
+
+        input:checked + .slider:before {
+          transform: translateX(
+            26px
+          ); /* Move slider to the right when checked */
+        }
+      }
+    }
+  }
+}
